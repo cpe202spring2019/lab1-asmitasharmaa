@@ -22,7 +22,7 @@ class TestLab1(unittest.TestCase):
         loc4 = Location("SLO", 35.30000001, -120.6999999)
         self.assertTrue(loc1 == loc4)
         loc3 = Location("Paris", 48.901, 2.4001)
-        self.assertFalse(loc1 == loc4)
+        self.assertFalse(loc1 == loc3)
         
 
 if __name__ == "__main__":
