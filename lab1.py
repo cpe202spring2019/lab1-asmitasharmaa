@@ -43,8 +43,8 @@ def bin_search(target, low, high, int_list):  # must use recursion
    if(low > high):
       return None
 
-   if(len(int_list) == 0):
-      return None
+   #if(len(int_list) == 0):
+    #  return None
 
    mid = (low+high)//2   
 
