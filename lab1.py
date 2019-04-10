@@ -14,7 +14,8 @@ def max_list_iter(int_list):  # must use iteration not recursion
    for i in range(1, len(int_list), 1):
       if(int_list[i] > max):
          max= int_list[i]
-   return int_list[max]         
+
+   return max         
 
 def reverse_rec(int_list):   # must use recursion
    """recursively reverses a list of numbers and returns the reversed list
