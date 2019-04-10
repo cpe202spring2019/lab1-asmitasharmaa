@@ -81,8 +81,8 @@ class TestLab1(unittest.TestCase):
         self.assertEqual(bin_search(1, 0, len(lst)-1, lst), None)
 
         #empty list and none
-        empty =[]
-        self.assertEqual(bin_search(5, 0, len(empty)-1, empty), None)
+        #empty =[]
+        #self.assertEqual(bin_search(5, 0, len(empty)-1, empty), None)
 
         tlist = None
         with self.assertRaises(ValueError):  # used to check for exception
