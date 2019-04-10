@@ -1,5 +1,6 @@
 # CPE 202 Lab 0
 from math import *
+
 # represents a location using name, latitude and longitude
 class Location:
     def __init__(self, name, lat, lon):
