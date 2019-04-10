@@ -28,6 +28,10 @@ class TestLab1(unittest.TestCase):
     def test_reverse_rec(self):
         self.assertEqual(reverse_rec([1,2,3]),[3,2,1])
 
+        tlist = None
+        with self.assertRaises(ValueError):  # used to check for exception
+            reverse_rec(tlist)
+
         #tests for same elements
         self.assertEqual(reverse_rec([0,0,0]),[0,0,0])
         
@@ -70,16 +74,19 @@ class TestLab1(unittest.TestCase):
         self.assertEqual(bin_search(1, low, high, list_val), 1)
         self.assertEqual(bin_search(0, low, high, list_val), 0)
     
-    #a single element list
+    #single element list
     def test_bin_search5(self):
         lst = [5]
         self.assertEqual(bin_search(5, 0, len(lst)-1, lst), 0)
         self.assertEqual(bin_search(1, 0, len(lst)-1, lst), None)
-        int_val = []
-        self.assertEqual(bin_search(1, 0, len(int_val)-1, int_val), None)
+
+        #empty list and none
+        empty =[]
+        self.assertEqual(bin_search(5, 0, len(empty)-1, empty), None)
+
         tlist = None
         with self.assertRaises(ValueError):  # used to check for exception
-            max_list_iter(tlist)
+            bin_search(9, 0, 1, tlist)
 
 
 if __name__ == "__main__":
