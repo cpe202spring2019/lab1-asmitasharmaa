@@ -25,7 +25,8 @@ def reverse_rec(int_list):   # must use recursion
       raise ValueError
 
    if(int_list == []):
-      return None
+      a = []
+      return a
    
    if(len(int_list)==1):
       return int_list 
