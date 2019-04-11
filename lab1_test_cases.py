@@ -22,7 +22,7 @@ class TestLab1(unittest.TestCase):
         self.assertEqual(max_list_iter([0,0]), 0)
         self.assertEqual(max_list_iter([]), None)
         self.assertEqual(max_list_iter([-1,-2,-3]),-1)
-
+        self.assertAlmostEqual(max_list_iter([-1.4, 5.8914, 18.01, 9]),18.01)
 
     #Testing reverse string
     def test_reverse_rec(self):
@@ -34,12 +34,14 @@ class TestLab1(unittest.TestCase):
 
         #tests for same elements
         self.assertEqual(reverse_rec([0,0,0]),[0,0,0])
+        self.assertEqual(reverse_rec([2]),[2])
+        self.assertEqual(reverse_rec([-2,9]),[9,-2])
         
         #tests for long reverse 
-        self.assertEqual(reverse_rec([1,7,3,8,0,2,5,8]),[8,5,2,0,8,3,7,1])
+        self.assertEqual(reverse_rec([1,7,3,8,0,2]),[2,0,8,3,7,1])
         
         #tests for empty lists
-        self.assertEqual(reverse_rec([]), None)
+        self.assertEqual(reverse_rec([]), [])
     
     #normal multiple elements list
     def test_bin_search1(self):
